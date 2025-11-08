@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Component layer: define reusable components using @apply so Tailwind utilities are available
+	 when the component rules are generated. This avoids the "Cannot apply unknown utility class"
+	 error that occurs when @apply is used outside of a layer. */
+/* Global CSS variables for your portfolio — change these once to update primary/secondary across pages */
+:root {
+	--primary: #0f172a; /* default primary (slate-900) — change to your preferred primary color */
+	--secondary: #0ea5e9; /* default secondary (sky-500) */
+}
+
+/* Add custom styles below if needed. Use CSS variables with Tailwind's arbitrary value support, e.g.:
+	 <header class="bg-[var(--primary)] text-white"> ... </header>
+*/
