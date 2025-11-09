@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Put global CSS variables in the `base` layer so they're defined before components/utilities
+   and available during PostCSS/Tailwind processing. Change these values to update colors
+   across all pages. */
+@layer base {
+  :root {
+    --primary: #0f172a; /* default primary (slate-900) */
+    --secondary: #0ea5e9; /* default secondary (sky-500) */
+  }
+}
+
+/* Usage examples:
+   - Direct utilities in HTML: <header class="bg-[var(--primary)] text-white">...
+   - Or in CSS with Tailwind arbitrary values: .my-el { background: var(--primary); }
+
+   Avoid using @apply with unresolved utilities unless placed in a correctly-ordered
+   @layer components block or when you are certain the utilities exist. */
